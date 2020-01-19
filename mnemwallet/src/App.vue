@@ -3,11 +3,21 @@
     <ion-item>
     <ion-label position="floating">password</ion-label>
     <ion-input></ion-input>
+     <router-link to="/Qrdisplay">
+    <ion-button size="small" shape="round" >Generate Account
+       QRCode</ion-button>
+     </router-link>
   </ion-item>
+  <router-view />
     </div>
     <!-- <router-view/> -->
   <!-- </div> -->
 </template>
+<script>
+export default {
+  name: "App"
+};
+</script>
 
 <style>
 #app {
