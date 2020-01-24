@@ -2,7 +2,10 @@
   <div id="app">
     <ion-item>
       <ion-label position="floating">password</ion-label>
-      <ion-input></ion-input>
+      <ion-input
+        v-bind:value="password"
+        v-on:input="password = $event.target.value"
+      ></ion-input>
       <router-link to="/Qrdisplay">
         <ion-button size="small" shape="round"
           >Generate Account QRCode</ion-button
@@ -11,13 +14,22 @@
     </ion-item>
     <router-view />
   </div>
-  <!-- <router-view/> -->
-  <!-- </div> -->
 </template>
 <script>
-export default {
-  name: "App"
-};
+export default Vue.extend(({
+  el: '#app',
+  data: {
+    password:''
+  },
+  created : function(){
+    console.log('created')
+    console.log(this.$el)
+  },
+  mounted : function(){
+    console.log('mounted Import')
+    this.password = vue.password
+  }
+}))
 </script>
 
 <style>
