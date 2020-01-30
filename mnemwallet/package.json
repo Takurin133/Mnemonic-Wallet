@@ -10,6 +10,7 @@
   "dependencies": {
     "@ionic/vue": "0.0.4",
     "core-js": "^3.4.4",
+    "eslint-config-vue": "^2.0.2",
     "nem2-hd-wallets": "^0.7.0",
     "nem2-qr-library": "^0.7.0",
     "vue": "^2.6.10",
@@ -21,7 +22,7 @@
     "@vue/cli-service": "^4.1.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "eslint-plugin-vue": "^5.0.0-beta.6",
     "ionicons": "^4.5.9-1",
     "vue-template-compiler": "^2.6.10"
   },
