@@ -32,7 +32,7 @@ new Vue({
   methods: {
     async getPassWord({ password }) {
       this.passwords = password;
-      return this.passwords;
+      console.log(this.passwords);
     }
   }
 });
