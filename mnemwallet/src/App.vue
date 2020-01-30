@@ -14,8 +14,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
-new Vue({
+export default {
   el: '#app',
   data () {
     return {
@@ -35,7 +34,7 @@ new Vue({
       return this.passwords
     }
   }
-})
+}
 </script>
 
 <style>
