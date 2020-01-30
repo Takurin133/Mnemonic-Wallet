@@ -14,28 +14,27 @@
 </template>
 
 <script>
-import Vue from "vue";
-new Vue({
-  el: "#app",
-  data() {
+export default {
+  el: '#app',
+  data () {
     return {
-      passwords: ""
-    };
+      passwords: ''
+    }
   },
-  created: function() {
-    console.log("created");
-    console.log(this.$el);
+  created () {
+    console.log('created')
+    console.log(this.$el)
   },
-  mounted: function() {
-    console.log("mounted Import");
+  mounted () {
+    console.log('mounted Import')
   },
   methods: {
-    async getPassWord({ password }) {
-      this.passwords = password;
-      console.log(this.passwords);
+    async getPassWord ({ password }) {
+      this.passwords = password
+      return this.passwords
     }
   }
-});
+}
 </script>
 
 <style>
