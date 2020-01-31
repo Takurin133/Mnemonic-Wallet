@@ -3,8 +3,12 @@
     <ion-item>
       <ion-label position="floating">password</ion-label>
       <ion-input
+<<<<<<< HEAD
         v-bind:value="password"
         v-on:input="psddeord = $event.target.value"
+=======
+      @input="password = $event.target.value"
+>>>>>>> a279a8cc486e61d451e43d3eb155af70308a914b
       ></ion-input>
       <router-link to="/Qrdisplay">
         <ion-button size="small" shape="round" @click="getPassWord()"
@@ -24,16 +28,21 @@ export default {
   },
   created () {
     console.log('created')
-    console.log(this.$el)
   },
   mounted () {
     console.log('mounted Import')
   },
   methods: {
+<<<<<<< HEAD
     async getPassWord () {
       const password = this.password
       // return this.passwords
       console.log(password)
+=======
+    getPassWord () {
+      console.log('on click button')
+      console.log(this.password)
+>>>>>>> a279a8cc486e61d451e43d3eb155af70308a914b
     }
   }
 }
