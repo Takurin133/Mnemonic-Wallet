@@ -2,11 +2,12 @@
   <div id="app">
     <ion-item>
       <ion-label position="floating">password</ion-label>
-      <ion-input v-bind:value="password"></ion-input>
+      <ion-input
+      @input="password = $event.target.value"
+      ></ion-input>
       <router-link to="/Qrdisplay">
-        <ion-button size="small" shape="round" @click="getPassWord({ value })"
-          >Generate Account QRCode</ion-button
-        >
+        <ion-button size="small" shape="round" @click="getPassWord()"
+          >Generate Account QRCode</ion-button>
       </router-link>
     </ion-item>
     <router-view />
@@ -18,20 +19,19 @@ export default {
   el: '#app',
   data () {
     return {
-      passwords: ''
+      password: ''
     }
   },
   created () {
     console.log('created')
-    console.log(this.$el)
   },
   mounted () {
     console.log('mounted Import')
   },
   methods: {
-    async getPassWord ({ password }) {
-      this.passwords = password
-      return this.passwords
+    getPassWord () {
+      console.log('on click button')
+      console.log(this.password)
     }
   }
 }
