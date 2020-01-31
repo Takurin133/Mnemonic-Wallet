@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import SettingModel from './views/GetWalletFromMnemonicQRJson'
 export default {
   data () {
     return {
@@ -31,6 +32,10 @@ export default {
     getPassWord () {
       console.log('on click button')
       console.log(this.password)
+      // 入力値を代入したpasswordをthis.passwordとよしなに結びつけてくれるのがVue
+      // methods内でのpasswordはローカル変数になるので定義されない
+      const model = new SettingModel()
+      model.password = this.password
     }
   }
 }
