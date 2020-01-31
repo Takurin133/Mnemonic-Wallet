@@ -33,16 +33,9 @@ export default {
     console.log('mounted Import')
   },
   methods: {
-<<<<<<< HEAD
-    async getPassWord () {
-      const password = this.password
-      // return this.passwords
-      console.log(password)
-=======
     getPassWord () {
       console.log('on click button')
       console.log(this.password)
->>>>>>> a279a8cc486e61d451e43d3eb155af70308a914b
     }
   }
 }
