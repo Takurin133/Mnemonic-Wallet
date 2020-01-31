@@ -3,12 +3,7 @@
     <ion-item>
       <ion-label position="floating">password</ion-label>
       <ion-input
-<<<<<<< HEAD
-        v-bind:value="password"
-        v-on:input="psddeord = $event.target.value"
-=======
       @input="password = $event.target.value"
->>>>>>> a279a8cc486e61d451e43d3eb155af70308a914b
       ></ion-input>
       <router-link to="/Qrdisplay">
         <ion-button size="small" shape="round" @click="getPassWord()"
