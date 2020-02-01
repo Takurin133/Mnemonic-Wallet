@@ -9,17 +9,23 @@
         <ion-button size="small" shape="round" @click="getPassWord()"
           >Generate Account QRCode</ion-button>
       </router-link>
+       <img
+        src= {{this.image}}
+        alt="mnemonic data"
+      >
     </ion-item>
     <router-view />
   </div>
 </template>
 
 <script>
-import SettingModel from './views/GetWalletFromMnemonicQRJson'
+import SettingModel from './views/GetWalletFromMnemonicQRJson.ts'
+import * as exportMnemonic from './views/GetWalletFromMnemonicQRJson.ts'
 export default {
   data () {
     return {
-      password: ''
+      password: '',
+      image: ''
     }
   },
   created () {
@@ -36,6 +42,7 @@ export default {
       // methods内でのpasswordはローカル変数になるので定義されない
       const model = new SettingModel()
       model.password = this.password
+      this.image = 'data:image/png;base64,' + exportMnemonic
     }
   }
 }
