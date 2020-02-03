@@ -10,7 +10,7 @@
           >Generate Account QRCode</ion-button>
       </router-link>
        <img
-        src= {{this.image}}
+        src= {{image}}
         alt="mnemonic data"
       >
     </ion-item>
